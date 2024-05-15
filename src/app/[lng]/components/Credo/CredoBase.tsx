@@ -18,7 +18,7 @@ export const CredoBase = ({
     const credoItems: CredoItem = credo;
 
   return (
-    <section className="bg-dark-blue text-white">
+    <section className="bg-dark-blue text-white flex flex-col items-center text-center">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"
@@ -33,7 +33,7 @@ export const CredoBase = ({
       <h1>{title}</h1>
       <ul className="flex flex-col gap-y-6 list-none">
         {Object.keys(credoItems).map((key) => (
-          <li key={key} className="p-4 font-mono">
+          <li key={key} className="p-4 font-medium text-lg">
             <Trans i18nKey={key} t={t}>
               {credoItems[key]}
             </Trans>

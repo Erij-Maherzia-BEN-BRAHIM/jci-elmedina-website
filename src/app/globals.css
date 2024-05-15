@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 section {
-  @apply px-8 py-10
+  @apply px-8 py-10 min-h-screen
 }
 h1{
-  @apply text-5xl font-black mx-3 my-6 text-jci-green uppercase z-20
+  @apply text-5xl font-black mx-3 my-6 text-jci-yellow uppercase z-20 tracking-wider
 }
