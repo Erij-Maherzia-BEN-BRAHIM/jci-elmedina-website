@@ -1,5 +1,4 @@
 import type { TFunction } from "i18next";
-import { ReactNode } from "react";
 import missionImage from "@/app/assets/images/mission.svg";
 import visionImage from "@/app/assets/images/vision.svg";
 import Image from "next/image";
@@ -24,7 +23,7 @@ export const MissionAndVisionBase = ({
     },
   ];
   return (
-    <section className="flex flex-col md:flex-row items-stretch justify-around gap-20">
+    <section id="about" className="flex flex-col md:flex-row items-stretch justify-around gap-20">
       {data.map((d) => (
         <Card
           key={d.title}
@@ -62,14 +61,3 @@ function Card({
     </div>
   );
 }
-
-const CardAnimatedBorderGradient = ({ children }: { children: ReactNode }) => {
-  return (
-    <div className="relative h-80 w-h-80 overflow-hidden rounded-b-xl p-[1px] backdrop-blur-3xl">
-      <span className="absolute inset-[-1000%] animate-[spin_7s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#4266b0_0%,#0d0f30_50%,#4266b0_100%)]" />
-      <div className="inline-flex h-full w-full items-center justify-center rounded-b-xl backdrop-blur-3xl">
-        {children}
-      </div>
-    </div>
-  );
-};

@@ -5,7 +5,7 @@ import { SparklesCore } from "../ui/sparkles";
 
 export const HeroBase = ({ t }: { t: TFunction<any, undefined> }) => {
   return (
-    <section className="bg-dark-blue text-white flex flex-col items-center h-screen justify-center text-center">
+    <section id="home" className="bg-dark-blue text-white flex flex-col items-center h-screen justify-center text-center">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"

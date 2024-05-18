@@ -19,11 +19,11 @@ export const NavbarBase = ({ t , className}: { t: TFunction<any, undefined> ,cla
               alt="logo JCI el Médina en couleurs"
             />
           </div>
-          <HoveredLink href="/#">{t("Home")}</HoveredLink>
-          <HoveredLink href="/#">{t("About")}</HoveredLink>
-          <HoveredLink href="/#">{t("Activities")}</HoveredLink>
-          <HoveredLink href="/#">{t("Recruitment")}</HoveredLink>
-          <HoveredLink href="/#">{t("Contact")}</HoveredLink>
+          <HoveredLink href="#home">{t("Home")}</HoveredLink>
+          <HoveredLink href="#about">{t("About")}</HoveredLink>
+          <HoveredLink href="#bex">{t("Ex. Board 2024")}</HoveredLink>
+          <HoveredLink href="#activities">{t("Activities")}</HoveredLink>
+          {/* <HoveredLink href="#contact">{t("Contact")}</HoveredLink> */}
           <LocaleSwitcher />
         </div>
       </nav>

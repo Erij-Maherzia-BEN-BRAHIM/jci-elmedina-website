@@ -1,6 +1,6 @@
 import React from "react";
 import { Trans } from "react-i18next/TransWithoutContext";
-import credo from "@/app/i18n/locales/en/credo.json";
+import credo from "@/app/i18n/locales/us/credo.json";
 import type { TFunction } from "i18next";
 
 interface CredoItem {
