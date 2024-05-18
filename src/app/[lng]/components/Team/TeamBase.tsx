@@ -11,6 +11,7 @@ import {
 } from "@/app/assets/images/team";
 import { StaticImageData } from "next/image";
 import { TFunction } from "i18next";
+import clsx from "clsx";
 
 export function TeamBase({ t }: { t: TFunction<any, undefined> }) {
 
@@ -55,16 +56,16 @@ export function TeamBase({ t }: { t: TFunction<any, undefined> }) {
   return (
     <section>
       <h1>{t("Executive Board 2024")}</h1>
-      <div className="flex flex-row justify-around mb-14">
+      <div className="flex flex-col md:flex-row justify-around md:mb-14">
         {team.slice(0, 3).map((member) => (
           <div
             key={member.name}
-            className="border border-black/[0.2] flex flex-col items-center max-w-sm mx-auto p-4 relative h-[20rem]"
+            className={clsx("border border-black/[0.2] flex flex-col items-center max-w-sm mx-auto p-4 relative h-[20rem]")}
           >
-            <Icon className="absolute h-6 w-6 -top-3 -left-3  text-black" />
-            <Icon className="absolute h-6 w-6 -bottom-3 -left-3  text-black" />
-            <Icon className="absolute h-6 w-6 -top-3 -right-3  text-black" />
-            <Icon className="absolute h-6 w-6 -bottom-3 -right-3  text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-black" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 text-black" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-black" />
 
             <EvervaultCard imgSrc={member.image} text={member.name} />
             <div className="flex flex-col items-center justify-center">
@@ -78,7 +79,7 @@ export function TeamBase({ t }: { t: TFunction<any, undefined> }) {
           </div>
         ))}
       </div>
-      <div className="flex flex-row justify-around">
+      <div className="flex flex-col md:flex-row justify-around">
         {team.slice(3).map((member) => (
           <div
             key={member.name}

@@ -2,7 +2,6 @@ import React from "react";
 import { Trans } from "react-i18next/TransWithoutContext";
 import credo from "@/app/i18n/locales/en/credo.json";
 import type { TFunction } from "i18next";
-import { SparklesCore } from "../ui/sparkles";
 
 interface CredoItem {
   [key: string]: string;
@@ -18,18 +17,7 @@ export const CredoBase = ({
     const credoItems: CredoItem = credo;
 
   return (
-    <section className="bg-dark-blue text-white flex flex-col items-center text-center">
-      <div className="w-full absolute inset-0 h-screen">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
+    <section className="bg-dark-blue text-white flex flex-col items-center text-center w-full">
       <h1>{title}</h1>
       <ul className="flex flex-col gap-y-6 list-none">
         {Object.keys(credoItems).map((key) => (
