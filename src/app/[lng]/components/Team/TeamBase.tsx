@@ -56,12 +56,13 @@ export function TeamBase({ t }: { t: TFunction<any, undefined> }) {
   return (
     <section id="bex">
       <h1>{t("Executive Board 2024")}</h1>
+      <div className="flex flex-col gap-y-5">
       <div className="flex flex-col md:flex-row justify-around md:mb-14">
         {team.slice(0, 3).map((member) => (
           <div
             key={member.name}
             className={clsx(
-              "border border-black/[0.2] flex flex-col items-center max-w-sm mx-auto p-4 relative h-[20rem]"
+              "border border-black/[0.2] flex flex-col items-center max-w-sm mx-auto p-4 relative w-[18rem]"
             )}
           >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-black" />
@@ -85,7 +86,7 @@ export function TeamBase({ t }: { t: TFunction<any, undefined> }) {
         {team.slice(3).map((member) => (
           <div
             key={member.name}
-            className="border border-black/[0.2] flex flex-col items-center max-w-sm mx-auto p-4 relative h-[20rem]"
+            className="border border-black/[0.2] flex flex-col items-center max-w-sm mx-auto p-4 relative w-[18rem]"
           >
             <Icon className="absolute h-6 w-6 -top-3 -left-3  text-black" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3  text-black" />
@@ -103,7 +104,7 @@ export function TeamBase({ t }: { t: TFunction<any, undefined> }) {
             </div>
           </div>
         ))}
-      </div>
+      </div></div>
     </section>
   );
 }
